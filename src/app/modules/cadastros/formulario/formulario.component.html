@@ -1,8 +1,70 @@
-<mat-card class="tela">
+<mat-card [formGroup]="form" class="tela">
     <mat-card-header>
         <mat-card-title>Formulário</mat-card-title>
     </mat-card-header>
-    <mat-card-content>
+    <mat-card-content fxLayout="column">
+
+        <div>
+            <mat-form-field fxFlex [appearance]="'outline'">
+                <mat-label>Título</mat-label>
+                <input matInput type="text" formControlName="titulo">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field fxFlex [appearance]="'outline'">
+                <mat-label>Descrição</mat-label>
+                <textarea matInput type="text" formControlName="descricao"></textarea>
+            </mat-form-field>
+        </div>
+
+        <div fxLayoutAlign="start center" fxLayoutGap="16px" fxLayout="row">
+            <mat-card-subtitle class="no-margin">Perguntas</mat-card-subtitle>
+            <button (click)="novaPergunta()" mat-icon-button>
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+
+        <div fxLayout="column" formArrayName="perguntas">
+            <div *ngFor="let formPergunta of perguntas.controls;index as i" class="pergunta" formGroupName="{{i}}">
+                <div class="perguntas-title">Perguntas</div>
+                <div fxLayout="row" fxLayoutGap="16px">
+
+                    <mat-form-field fxFlex [appearance]="'outline'">
+                        <mat-label>Título</mat-label>
+                        <input matInput type="text" formControlName="titulo">
+                    </mat-form-field>
+
+                    <mat-form-field [appearance]="'outline'">
+                        <mat-label>Tipo</mat-label>
+                        <mat-select formControlName="tipo">
+                            <mat-option value="simples">Simples</mat-option>
+                            <mat-option value="data">Data</mat-option>
+                            <mat-option value="numerico">Numérico</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div fxLayoutAlign="start center" fxLayoutGap="16px" fxLayout="row">
+                    <mat-card-subtitle class="no-margin">Opções</mat-card-subtitle>
+                    <button (click)="novaOpcao(i)" mat-icon-button>
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+
+                <div formArrayName="opcoes" >
+                    <div *ngFor="let opcao of getOpcoes(i).controls; index as y">
+                        <mat-form-field [appearance]="'outline'">
+                            <mat-label>Opção {{y + 1}}</mat-label>
+                            <input matInput type="text" formControlName="{{y}}">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
     </mat-card-content>
     <mat-card-actions fxLayoutAlign="end start">

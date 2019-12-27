@@ -5,7 +5,8 @@ import { FormularioComponent } from './formulario.component';
 
 const routes: Routes = [
   {
-    path: '', component: FormularioComponent
+    path: '', 
+    component: FormularioComponent
   }
 ];
 

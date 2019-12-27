@@ -1,0 +1,33 @@
+.grid-perguntas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+}
+
+.pergunta{
+    margin: 16px 0;
+    padding: 16px;
+    padding-top: 28px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    position: relative;
+}
+
+.no-margin{
+    margin: 0!important;
+}
+
+.perguntas-title{
+    position: absolute;
+    left: 16px;
+    height: 32px;
+    padding: 0 16px;
+    border: 1px solid #dcdcdc;
+    background-color: white;
+    top: -16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 10pt;
+}
