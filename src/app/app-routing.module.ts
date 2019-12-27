@@ -8,7 +8,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'admin', component: AdminComponent,
-    children: []
+    children: [
+      {path: 'pessoa', loadChildren: './modules/cadastros/pessoa/pessoa.module#PessoaModule'}
+    ]
   }
 ];
 

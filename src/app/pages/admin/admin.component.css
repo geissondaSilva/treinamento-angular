@@ -3,7 +3,11 @@
 }
 
 .menu{
-    padding: 16px;
+    width: 300px;
+}
+
+mat-drawer-content{
+    padding: 0 16px;
 }
 
 .main{
@@ -14,4 +18,14 @@
 
 .main-content{
     flex-grow: 1;
+}
+
+mat-icon{
+    margin-right: 24px;
+}
+
+.link{
+    display: flex!important;
+    justify-content: flex-start;
+    align-items: center;
 }
