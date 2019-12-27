@@ -1,0 +1,39 @@
+<mat-card [formGroup]="form" class="tela">
+    <mat-card-header>
+        <mat-card-title>Gerador de Avatar</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutGap="16px">
+            <mat-form-field [appearance]="'outline'" fxFlex>
+                <mat-label>Cor de fundo</mat-label>
+                <mat-select formControlName="cor">
+                    <mat-option value="red">Vermelho</mat-option>
+                    <mat-option value="green">Verde</mat-option>
+                    <mat-option value="blue">Azul</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field [appearance]="'outline'" fxFlex>
+                <mat-label>Cor do Texto</mat-label>
+                <mat-select formControlName="corText">
+                    <mat-option value="white">Branco</mat-option>
+                    <mat-option value="black">Preto</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field [appearance]="'outline'">
+                <mat-label>Label</mat-label>
+                <input class="label" matInput maxlength="1" type="text" formControlName="label">
+            </mat-form-field>
+        </div>
+        <div class="avatar-container" fxLayout="row" fxLayoutAlign="center start">
+            <div class="avatar" [appAvatar]="form">
+                <div class="avatar-content"></div>
+            </div>
+        </div>
+        <div>{{'Geisson' | name:4:'M'}}</div>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="end start">
+        <button mat-raised-button color="primary">Salvar</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,29 @@
+.avatar-container {
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.avatar {
+    width: 30%;
+    padding-bottom: 30%;
+    border-radius: 50%;
+    border: 1px solid #e2e2e2;
+    position: relative;
+}
+
+.label {
+    text-transform: uppercase;
+}
+
+.avatar-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    text-transform: uppercase;
+}

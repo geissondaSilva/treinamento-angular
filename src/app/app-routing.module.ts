@@ -11,7 +11,8 @@ const routes: Routes = [
     children: [
       { path: 'pessoa', loadChildren: './modules/cadastros/pessoa/pessoa.module#PessoaModule' },
       { path: 'empresa', loadChildren: './modules/cadastros/empresa/empresa.module#EmpresaModule' },
-      { path: 'formulario', loadChildren: './modules/cadastros/formulario/formulario.module#FormularioModule' }
+      { path: 'formulario', loadChildren: './modules/cadastros/formulario/formulario.module#FormularioModule' },
+      { path: 'gerador-avatar', loadChildren: './modules/ferramentas/gerador-avatar/gerador-avatar.module#GeradorAvatarModule'}
     ]
   }
 ];
