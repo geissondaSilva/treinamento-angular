@@ -1,0 +1,17 @@
+.menu-btn {
+    margin-right: 16px;
+}
+
+.menu{
+    padding: 16px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-content{
+    flex-grow: 1;
+}
