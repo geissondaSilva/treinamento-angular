@@ -30,11 +30,11 @@ mat-card-actions{
 .endereco-title{
     position: absolute;
     left: 16px;
-    height: 24px;
+    height: 32px;
     padding: 0 16px;
     border: 1px solid #dcdcdc;
-    background-color: rgb(66, 66, 66);
-    top: -12px;
+    background-color: white;
+    top: -16px;
     display: flex;
     justify-content: center;
     align-items: center;

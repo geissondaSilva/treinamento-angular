@@ -2,3 +2,30 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@keyframes tela-in{
+    from{
+        transform: translateX(32px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.tela{
+    animation-name: tela-in;
+    animation-duration: 400ms;
+    width: 100%;
+    max-width: 800px;
+    margin: 16px auto;
+}
+
+.no-margin{
+    margin: 0!important;
+}
+
+.tela mat-card-actions{
+    margin: 0!important;
+}
