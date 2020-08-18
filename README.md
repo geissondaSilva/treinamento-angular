@@ -1,4 +1,15 @@
-# TreinamentoAngular
+# Treinamento Angular
+Este projeto foi utilizado para o treinamento de uma equipe de desenvolvimento angular, neste treinamento foi abordado os seguintes temas:
+- Modulos
+- Componentes
+- Diretivas
+- Filtros
+- Serviços
+
+Além de outras bibliotecas utilizadas no angular, como:
+- angular-forms
+- rxjs
+- angular-material
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
 
