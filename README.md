@@ -17,4 +17,4 @@ Este projeto foi desenvolvido com [Angular CLI](https://github.com/angular/angul
 
 Rode o comando `ng serve` em um terminal e depois abra em seu navegador a url `http://localhost:4200/`. Ao salvar as alterações, automaticamente o servidor do node vai atualizar a url.
 
-para mais detalhes abra a documento do [Angular](https://angular.io/).
+Para mais detalhes abra a documento do [Angular](https://angular.io/).
